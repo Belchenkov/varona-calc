@@ -6,6 +6,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -22,4 +24,83 @@ body {
   font-size: 18px;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
+.header {
+  width: 100%;
+  background: $primary-color;
+  color: $bg-color;
+  display: table;
+
+  &__box {
+    display: table-cell;
+    vertical-align: middle;
+    height: 220px;
+  }
+
+  &__bottom {
+    background: rgb(143, 200, 216);
+    width: 100%;
+    height: 50px;
+  }
+}
+
+.main-buttons {
+  background: $bg-color;
+  width: 100%;
+  display: table;
+  height: 100px;
+
+  button {
+    padding: 15px 40px;
+    outline: none;
+  }
+
+  &__left {
+    float: left;
+    width: 50%;
+    text-align: right;
+    line-height: 100px;
+  }
+
+  &__right {
+    float: left;
+    width: 50%;
+    text-align: left;
+    line-height: 100px;
+    padding-left: 2%;
+  }
+
+
+  &__calc {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    background: $bg-color;
+  }
+
+  &__plans {
+    background: grey;
+    color: $bg-color;
+    border: 2px solid grey;
+    border: none;
+  }
+}
+
+.main {
+  &__left {
+    width: 50%;
+    background: $primary-color;
+    min-height: 500px;
+    float: left;
+  }
+
+  &__right {
+    width: 40%;
+    min-height: 500px;
+    background: #333;
+    float: left;
+  }
+}
