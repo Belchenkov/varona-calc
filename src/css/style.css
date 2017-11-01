@@ -13,7 +13,7 @@ body {
   background-color: white;
   color: #000;
   font-family: "Arial", sans-serif;
-  font-size: 18px; }
+  font-size: 16px; }
 
 .container {
   max-width: 960px;
@@ -64,12 +64,41 @@ body {
 
 .main__left {
   width: 50%;
-  background: #02A7D8;
-  min-height: 500px;
-  float: left; }
+  float: left;
+  text-align: right;
+  color: white;
+  padding-bottom: 150px; }
+  .main__left .left__box {
+    background: #02A7D8;
+    padding: 25px 25px 0 0;
+    height: 500px;
+    margin-bottom: 20px; }
+    .main__left .left__box .left__list {
+      display: inline-table; }
+      .main__left .left__box .left__list .left__icon {
+        display: table-cell; }
+      .main__left .left__box .left__list .left__content {
+        display: table-cell;
+        text-align: left;
+        padding-left: 15px; }
+        .main__left .left__box .left__list .left__content .left__btn {
+          border: 2px solid #ccc;
+          padding: 5px 15px;
+          background: #02A7D8;
+          color: white;
+          margin: 10px 0; }
+  .main__left .left__bottom {
+    background: white;
+    color: #000; }
 
 .main__right {
   width: 40%;
   min-height: 500px;
-  background: #333;
-  float: left; }
+  background: #f4f4f4;
+  float: left;
+  padding-left: 25px; }
+  .main__right .right__plans-btn .plans-btn__list .plans-btn__item {
+    float: left;
+    margin-right: 2%;
+    padding: 10px;
+    border: 2px solid #02A7D8; }

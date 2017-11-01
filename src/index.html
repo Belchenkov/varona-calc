@@ -4,7 +4,6 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
         <link rel="stylesheet" href="css/style.css">
         <title>Расчет стоимости</title>
     </head>
@@ -37,8 +36,62 @@
         </section>
 
         <main class="main">
-            <div class="main__left"></div>
-            <div class="main__right"></div>
+            <div class="main__left">
+                <div class="left__box">
+                    <div class="left__list">
+                        <div class="left__icon">icon</div>
+                        <div class="left__content">
+                            <div class="left__header">Количество компьютеров</div>
+                            <button class="left__btn">5 шт.</button>
+                            <div class="left__range">
+                                <input type="range" min="0" max="10" step="1" value="5"> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="left__bottom">
+                    <p>* Каждый следующий сервер - 490 рублей</p>
+                    <p>Стоимость обслуживания 1 компьютера - 490 рублей</p>
+                </div>
+            </div>
+            <div class="main__right">
+                <h3 class="right__header">Вам подходят тарифные планы</h3>
+                <div class="right__plans-btn">
+                    <ul class="plans-btn__list">
+                        <li class="plans-btn__item">Базовый</li>
+                        <li class="plans-btn__item">Стандарт</li>
+                        <li class="plans-btn__item">Премиум</li>
+                        <li class="plans-btn__item">VIP</li>
+                    </ul>
+                </div>
+                <div class="right__coast">
+                    Стоимость тарифа <span class="coats__span">9999 руб.</span>
+                </div>
+
+                <table class="right_table">
+                    <tr>
+                        <td>Плановые выезды</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Экстренные выезды</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Время реакции</td>
+                        <td>8 часов</td>
+                    </tr>
+                    <tr>
+                        <td>Время решения проблемы</td>
+                        <td>16 часов</td>
+                    </tr>
+                    <tr>
+                        <td>Рабочее время</td>
+                        <td>9:00-18:00</td>
+                    </tr>
+                </table>
+            </div>
+
         </main>
 
         <script type="text/javascript" src="js/jquery.min.js"></script>

@@ -21,7 +21,7 @@ body {
   background-color: $bg-color;
   color: $font-color;
   font-family: $bg-font;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .container {
@@ -92,15 +92,68 @@ body {
 .main {
   &__left {
     width: 50%;
-    background: $primary-color;
-    min-height: 500px;
     float: left;
+    text-align: right;
+    color: $bg-color;
+    padding-bottom: 150px;
+
+    .left__box {
+      background: $primary-color;
+      padding: 25px 25px 0 0;
+      height: 500px;
+      margin-bottom: 20px;
+
+      .left__list {
+        display: inline-table;
+
+        .left__icon {
+          display: table-cell;
+        }
+        
+        .left__content {
+          display: table-cell;
+          text-align: left;
+          padding-left: 15px;
+          
+          .left__header {
+          
+          }
+  
+          .left__btn {
+            border: 2px solid #ccc;
+            padding: 5px 15px;
+            background: $primary-color;
+            color: $bg-color;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+    .left__bottom {
+      background: $bg-color;
+      color: #000;
+    }
   }
 
   &__right {
     width: 40%;
     min-height: 500px;
-    background: #333;
+    background: #f4f4f4;
     float: left;
+    padding-left: 25px;
+
+    .right__plans-btn {
+      .plans-btn__list {
+        .plans-btn__item {
+          float: left;
+          margin-right: 2%;
+          padding: 10px;
+          border: 2px solid $primary-color;
+          
+        }
+      }
+    }
   }
+
+  
 }
