@@ -153,6 +153,20 @@ body {
         }
       }
     }
+
+    .right_table {
+      width:100%;
+      border-collapse:collapse;
+      border: 1px solid $primary-color;
+
+      tr {
+        border: 1px solid $primary-color;
+
+        td {
+          padding: 10px 0;
+        }
+      }
+    }
   }
 
   

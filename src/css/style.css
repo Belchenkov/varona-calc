@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
@@ -102,3 +102,11 @@ body {
     margin-right: 2%;
     padding: 10px;
     border: 2px solid #02A7D8; }
+  .main__right .right_table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #02A7D8; }
+    .main__right .right_table tr {
+      border: 1px solid #02A7D8; }
+      .main__right .right_table tr td {
+        padding: 10px 0; }
