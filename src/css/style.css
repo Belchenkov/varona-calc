@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,700&subset=cyrillic");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,8 +13,12 @@ ul {
 body {
   background-color: white;
   color: #000;
-  font-family: "Arial", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 16px; }
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto; }
 
 .container {
   max-width: 960px;
@@ -27,11 +32,25 @@ body {
   .header__box {
     display: table-cell;
     vertical-align: middle;
-    height: 220px; }
+    height: 215px; }
+  .header__h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    padding-bottom: 0; }
+    .header__h1:after {
+      content: "";
+      display: block;
+      margin-top: 10px;
+      width: 55px;
+      background-color: white;
+      height: 3px; }
+  .header__subheader {
+    font-size: 1.3125rem; }
   .header__bottom {
-    background: #8fc8d8;
+    background: url("../img/line_under_header.png") no-repeat center;
     width: 100%;
-    height: 50px; }
+    height: 61px; }
 
 .main-buttons {
   background: white;
@@ -65,16 +84,22 @@ body {
 .main__left {
   width: 50%;
   float: left;
-  text-align: right;
   color: white;
   padding-bottom: 150px; }
   .main__left .left__box {
     background: #02A7D8;
     padding: 25px 25px 0 0;
+    text-align: right;
     height: 500px;
     margin-bottom: 20px; }
     .main__left .left__box .left__list {
-      display: inline-table; }
+      width: 50%;
+      float: right;
+      clear: both; }
+      .main__left .left__box .left__list .left__time {
+        float: left; }
+        .main__left .left__box .left__list .left__time .left__radio {
+          text-align: center; }
       .main__left .left__box .left__list .left__icon {
         display: table-cell; }
       .main__left .left__box .left__list .left__content {

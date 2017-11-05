@@ -9,125 +9,193 @@
     </head>
 
     <body>
-
-        <header class="header">
-            <div class="container">
-                <div class="header__box">
-                    <h1 class="header__h1">Расчет стоимости</h1>
-                    <p class="header__subheader">
-                        Чтобы подобрать подходящий тарифный план<br>
-                        воспользуйтесь простым калькулятором стоимости<br>
-                        или выберите тарифный план из списка.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="header__bottom"></div>
-        </header>
-
-        <section class="main-buttons">
-            <div class="main-buttons__left">
-                <button class="main-buttons__calc">Калькулятор</button>
-            </div>
-            
-            <div class="main-buttons__right">  
-                <button class="main-buttons__plans">Тарифные планы</button>
-            </div>
-        </section>
-
-        <main class="main">
-            <div class="main__left">
-                <div class="left__box">
-                    <div class="left__list">
-                        <div class="left__icon">icon</div>
-                        <div class="left__content">
-                            <div class="left__header">Количество компьютеров</div>
-                            <button class="left__btn">5 шт.</button>
-                            <div class="left__range">
-                                <input type="range" min="0" max="10" step="1" value="5"> 
-                            </div>
-                        </div> 
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__box">
+                        <h1 class="header__h1">Расчет стоимости</h1>
+                        <p class="header__subheader">
+                            Чтобы подобрать подходящий тарифный план<br>
+                            воспользуйтесь простым калькулятором стоимости<br>
+                            или выберите тарифный план из списка.
+                        </p>
                     </div>
                 </div>
-                <div class="left__bottom">
-                    <p>* Каждый следующий сервер - 490 рублей</p>
-                    <p>Стоимость обслуживания 1 компьютера - 490 рублей</p>
-                </div>
-            </div>
-            <div class="main__right">
-                <h3 class="right__header">Вам подходят тарифные планы</h3>
-                <div class="right__plans-btn">
-                    <ul class="plans-btn__list">
-                        <li class="plans-btn__item">Базовый</li>
-                        <li class="plans-btn__item">Стандарт</li>
-                        <li class="plans-btn__item">Премиум</li>
-                        <li class="plans-btn__item">VIP</li>
-                    </ul>
-                </div>
-                <div class="right__coast">
-                    Стоимость тарифа <span class="coats__span">9999 руб.</span>
-                </div>
+                
+                <div class="header__bottom"></div>
+            </header>
 
-                <table class="right_table">
-                    <tr>
-                        <td>Плановые выезды</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Экстренные выезды</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Время реакции</td>
-                        <td>8 часов</td>
-                    </tr>
-                    <tr>
-                        <td>Время решения проблемы</td>
-                        <td>16 часов</td>
-                    </tr>
-                    <tr>
-                        <td>Рабочее время</td>
-                        <td>9:00-18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Коэффициент удаленности</td>
-                        <td>1-1,2</td>
-                    </tr>
-                    <tr>
-                        <td>Количество техники</td>
-                        <td> > 15шт.*</td>
-                    </tr>
-                    <tr>
-                        <td>Обслуживание сервера</td>
-                        <td>1300 руб</td>
-                    </tr>
-                    <tr>
-                        <td>Проектный мониторинг</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Закрепленный инженер</td>
-                        <td>-</td>
-                    </tr>
-                </table>
+            <section class="main-buttons">
+                <div class="main-buttons__left">
+                    <button class="main-buttons__calc">Калькулятор</button>
+                </div>
+                
+                <div class="main-buttons__right">  
+                    <button class="main-buttons__plans">Тарифные планы</button>
+                </div>
+            </section>
 
-                <div class="right__bottom">
-                    <h3 class="bottom__header">
-                        Предварительная стоимость:
-                    </h3>
-                    <div class="bottom__subheader">
-                       с учетом количества компьютеров
+            <main class="main" id="calc">
+                <div class="container">
+                <div class="main__left">
+                    <div class="left__box">
+                        <div class="left__list">
+                            <div class="left__icon">icon</div>
+                            <div class="left__content">
+                                <div class="left__header">Количество компьютеров</div>
+                                <button class="left__btn">{{ amountComp }} шт.</button>
+                                <div class="left__range">
+                                    <input 
+                                        type="range"
+                                        v-model="amountComp"
+                                        min="0" 
+                                        max="10"
+                                        step="1"
+                                        value="{{amountComp}}"
+                                        v-on:input="rangeComp($event)"
+                                    > 
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="left__list">
+                            <div class="left__icon">icon</div>
+                            <div class="left__content">
+                                <div class="left__header">Режим работы специалиста</div>
+                                <div class="left__time"> 
+                                    <button class="left__btn">9:00-18:00</button>
+                                    <div class="left__radio">
+                                        <input 
+                                            type="radio"
+                                            name="time"
+                                            v-on:click="console.log('click')"
+                                        > 
+                                    </div>
+                                </div>
+
+                                <div class="left__time"> 
+                                    <button class="left__btn">9:00-18:00</button>
+                                    <div class="left__radio">
+                                        <input 
+                                            type="radio"
+                                            name="time"
+                                            v-on:click="console.log('click')"
+                                        > 
+                                    </div>
+                                </div>
+                                <div class="left__time"> 
+                                    <button class="left__btn">9:00-18:00</button>
+                                    <div class="left__radio">
+                                        <input 
+                                            type="radio"
+                                            name="time"
+                                            v-on:click="console.log('click')"
+                                        > 
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="left__list">
+                            <div class="left__icon">icon</div>
+                            <div class="left__content">
+                                <div class="left__header">Количество серверов</div>
+                                <button class="left__btn">{{ amountServer }} шт.</button>
+                                <div class="left__range">
+                                    <input 
+                                        type="range"
+                                        v-model="amountServer"
+                                        min="0" 
+                                        max="10"
+                                        step="1"
+                                        value="{{amountServer}}"
+                                        v-on:input="rangeServer($event)"
+                                    > 
+                                </div>
+                            </div> 
+                        </div>
                     </div>
-                    <div class="bottom__total">3333 рублей</div>
-                    <div class="bottom__btn">Заказать</div>
+                    <div class="left__bottom">
+                        <p>* Каждый следующий сервер - 490 рублей</p>
+                        <p>Стоимость обслуживания 1 компьютера - 490 рублей</p>
+                    </div>
+                </div>
+                <div class="main__right">
+                    <h3 class="right__header">Вам подходят тарифные планы</h3>
+                    <div class="right__plans-btn">
+                        <ul class="plans-btn__list">
+                            <li class="plans-btn__item">Базовый</li>
+                            <li class="plans-btn__item">Стандарт</li>
+                            <li class="plans-btn__item">Премиум</li>
+                            <li class="plans-btn__item">VIP</li>
+                        </ul>
+                    </div>
+                    <div class="right__coast">
+                        Стоимость тарифа <span class="coats__span">9999 руб.</span>
+                    </div>
+
+                    <table class="right_table">
+                        <tr>
+                            <td>Плановые выезды</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Экстренные выезды</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Время реакции</td>
+                            <td>8 часов</td>
+                        </tr>
+                        <tr>
+                            <td>Время решения проблемы</td>
+                            <td>16 часов</td>
+                        </tr>
+                        <tr>
+                            <td>Рабочее время</td>
+                            <td>9:00-18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Коэффициент удаленности</td>
+                            <td>1-1,2</td>
+                        </tr>
+                        <tr>
+                            <td>Количество техники</td>
+                            <td> > 15шт.*</td>
+                        </tr>
+                        <tr>
+                            <td>Обслуживание сервера</td>
+                            <td>1300 руб</td>
+                        </tr>
+                        <tr>
+                            <td>Проектный мониторинг</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Закрепленный инженер</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+
+                    <div class="right__bottom">
+                        <h3 class="bottom__header">
+                            Предварительная стоимость:
+                        </h3>
+                        <div class="bottom__subheader">
+                        с учетом количества компьютеров
+                        </div>
+                        <div class="bottom__total">{{ (+amountServer + +amountComp) * 490 }}</div>
+                        <div class="bottom__btn">Заказать</div>
 
 
-                </div>  
-            </div>
-
-        </main>
+                    </div>  
+                </div>
+                </div>
+            </main>
+        </div>
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/vue.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
