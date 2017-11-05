@@ -26,7 +26,7 @@ body {
 
 .header {
   width: 100%;
-  background: #02A7D8;
+  background: #00a7d6;
   color: white;
   display: table; }
   .header__box {
@@ -56,30 +56,46 @@ body {
   background: white;
   width: 100%;
   display: table;
-  height: 100px; }
+  height: 130px; }
   .main-buttons button {
-    padding: 15px 40px;
-    outline: none; }
+    outline: none;
+    font-size: 1.313rem;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in; }
   .main-buttons__left {
     float: left;
     width: 50%;
     text-align: right;
-    line-height: 100px; }
+    line-height: 130px; }
   .main-buttons__right {
     float: left;
     width: 50%;
     text-align: left;
-    line-height: 100px;
-    padding-left: 2%; }
+    line-height: 130px;
+    padding-left: 1.3125rem; }
   .main-buttons__calc {
-    border: 2px solid #02A7D8;
-    color: #02A7D8;
-    background: white; }
+    border: 3px solid #00a7d6;
+    padding: 20px 65px;
+    color: #00a7d6;
+    background: white;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in; }
+    .main-buttons__calc:hover {
+      background: #00a7d6;
+      color: #fff; }
   .main-buttons__plans {
-    background: grey;
+    background: #cccccc;
+    padding: 20px 40px;
     color: white;
     border: 2px solid grey;
     border: none; }
+    .main-buttons__plans:hover {
+      background: #aa9d9d;
+      color: #fff;
+      -webkit-transition: all .4s ease-in;
+      transition: all .4s ease-in; }
 
 .main__left {
   width: 50%;
@@ -87,7 +103,7 @@ body {
   color: white;
   padding-bottom: 150px; }
   .main__left .left__box {
-    background: #02A7D8;
+    background: #00a7d6;
     padding: 25px 25px 0 0;
     text-align: right;
     height: 500px;
@@ -109,7 +125,7 @@ body {
         .main__left .left__box .left__list .left__content .left__btn {
           border: 2px solid #ccc;
           padding: 5px 15px;
-          background: #02A7D8;
+          background: #00a7d6;
           color: white;
           margin: 10px 0; }
   .main__left .left__bottom {
@@ -126,12 +142,12 @@ body {
     float: left;
     margin-right: 2%;
     padding: 10px;
-    border: 2px solid #02A7D8; }
+    border: 2px solid #00a7d6; }
   .main__right .right_table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #02A7D8; }
+    border: 1px solid #00a7d6; }
     .main__right .right_table tr {
-      border: 1px solid #02A7D8; }
+      border: 1px solid #00a7d6; }
       .main__right .right_table tr td {
         padding: 10px 0; }

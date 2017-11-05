@@ -65,8 +65,6 @@ body {
 
   &__subheader {
     font-size: 1.3125rem;
-
-    
   }
 
   &__bottom {
@@ -80,39 +78,56 @@ body {
   background: $bg-color;
   width: 100%;
   display: table;
-  height: 100px;
+  height: 130px;
 
   button {
-    padding: 15px 40px;
     outline: none;
+    font-size: 1.313rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s ease-in;
   }
 
   &__left {
     float: left;
     width: 50%;
     text-align: right;
-    line-height: 100px;
+    line-height: 130px;
   }
 
   &__right {
     float: left;
     width: 50%;
     text-align: left;
-    line-height: 100px;
-    padding-left: 2%;
+    line-height: 130px;
+    padding-left: 1.3125rem;
   }
 
   &__calc {
-    border: 2px solid $primary-color;
+    border: 3px solid $primary-color;
+    padding: 20px 65px;
     color: $primary-color;
     background: $bg-color;
+    transition: all .4s ease-in;
+    
+    &:hover {
+      background: $primary-color;
+      color: #fff;
+    }
   }
 
   &__plans {
-    background: grey;
+    background: #cccccc;
+    padding: 20px 40px;
     color: $bg-color;
     border: 2px solid grey;
     border: none;
+    
+    &:hover {
+      background: #aa9d9d;
+      color: #fff;
+      transition: all .4s ease-in;
+    }
   }
 }
 
