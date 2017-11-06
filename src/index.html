@@ -4,6 +4,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <title>Расчет стоимости</title>
     </head>
@@ -36,11 +37,12 @@
             </section>
 
             <main class="main" id="calc">
-                <div class="container">
                 <div class="main__left">
                     <div class="left__box">
                         <div class="left__list">
-                            <div class="left__icon">icon</div>
+                            <div class="left__icon">
+                                <img src="img/amout_comp.svg" alt="Количество компьютеров">
+                            </div>
                             <div class="left__content">
                                 <div class="left__header">Количество компьютеров</div>
                                 <button class="left__btn">{{ amountComp }} шт.</button>
@@ -54,18 +56,24 @@
                                         value="{{amountComp}}"
                                         v-on:input="rangeComp($event)"
                                     > 
-                                </div>
-                            </div> 
+                                </div> 
+                            </div>
+                            
                         </div>
 
                         <div class="left__list">
-                            <div class="left__icon">icon</div>
+                            <div class="left__icon">
+                                <img src="img/hours.svg" alt="Режим работы специалиста">
+                            </div>
                             <div class="left__content">
                                 <div class="left__header">Режим работы специалиста</div>
                                 <div class="left__time"> 
-                                    <button class="left__btn">9:00-18:00</button>
+                                    <label for="time_one" class="left__btn">
+                                        9:00-18:00
+                                    </label>
                                     <div class="left__radio">
                                         <input 
+                                            id="time_one"
                                             type="radio"
                                             name="time"
                                             v-on:click="console.log('click')"
@@ -74,9 +82,12 @@
                                 </div>
 
                                 <div class="left__time"> 
-                                    <button class="left__btn">9:00-18:00</button>
+                                    <label for="time_two" class="left__btn">
+                                        9:00-20:00
+                                    </label>
                                     <div class="left__radio">
                                         <input 
+                                            id="time_two"
                                             type="radio"
                                             name="time"
                                             v-on:click="console.log('click')"
@@ -84,9 +95,12 @@
                                     </div>
                                 </div>
                                 <div class="left__time"> 
-                                    <button class="left__btn">9:00-18:00</button>
+                                    <label for="time_three" class="left__btn">
+                                        Круглосуточно
+                                    </label>
                                     <div class="left__radio">
                                         <input 
+                                            id="time_three"
                                             type="radio"
                                             name="time"
                                             v-on:click="console.log('click')"
@@ -97,7 +111,9 @@
                         </div>
 
                         <div class="left__list">
-                            <div class="left__icon">icon</div>
+                            <div class="left__icon">
+                                <img src="img/servers.svg" alt="Количество серверов">
+                            </div>
                             <div class="left__content">
                                 <div class="left__header">Количество серверов</div>
                                 <button class="left__btn">{{ amountServer }} шт.</button>
@@ -113,6 +129,7 @@
                                     > 
                                 </div>
                             </div> 
+                            
                         </div>
                     </div>
                     <div class="left__bottom">
@@ -124,14 +141,14 @@
                     <h3 class="right__header">Вам подходят тарифные планы</h3>
                     <div class="right__plans-btn">
                         <ul class="plans-btn__list">
-                            <li class="plans-btn__item">Базовый</li>
-                            <li class="plans-btn__item">Стандарт</li>
-                            <li class="plans-btn__item">Премиум</li>
-                            <li class="plans-btn__item">VIP</li>
+                            <li class="plans-btn__item basic">Базовый</li>
+                            <li class="plans-btn__item standart">Стандарт</li>
+                            <li class="plans-btn__item premium">Премиум</li>
+                            <li class="plans-btn__item vip">VIP</li>
                         </ul>
                     </div>
                     <div class="right__coast">
-                        Стоимость тарифа <span class="coats__span">9999 руб.</span>
+                        Стоимость тарифа <span class="coats__span">2990 руб.</span>
                     </div>
 
                     <table class="right_table">
@@ -184,12 +201,9 @@
                         <div class="bottom__subheader">
                         с учетом количества компьютеров
                         </div>
-                        <div class="bottom__total">{{ (+amountServer + +amountComp) * 490 }}</div>
-                        <div class="bottom__btn">Заказать</div>
-
-
+                        <div class="bottom__total">{{ (+amountServer + +amountComp) * 490 }} рублей</div>
+                        <a href="#" class="bottom__btn">Заказать</a>
                     </div>  
-                </div>
                 </div>
             </main>
         </div>

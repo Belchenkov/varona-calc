@@ -3,6 +3,9 @@
 // Variables
 @import 'variables';
 
+// Input Range
+@import 'partials/_rangeInput.scss';
+
 
 * {
   box-sizing: border-box;
@@ -20,13 +23,15 @@ ul {
 body {
   background-color: $bg-color;
   color: $font-color;
-  font-family: $bg-font;
+  font-family: $main-font;
   font-size: 16px;
 }
 
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 80px;
 }
 
 .container {
@@ -120,8 +125,7 @@ body {
     background: #cccccc;
     padding: 20px 40px;
     color: $bg-color;
-    border: 2px solid grey;
-    border: none;
+    border: 2px solid #dbdbdb;
     
     &:hover {
       background: #aa9d9d;
@@ -132,6 +136,7 @@ body {
 }
 
 .main {
+  padding-bottom: 500px;
   &__left {
     width: 50%;
     float: left;
@@ -142,13 +147,23 @@ body {
       background: $primary-color;
       padding: 25px 25px 0 0;
       text-align: right;
-      height: 500px;
+      min-height: 650px;
       margin-bottom: 20px;
+      border: 1px solid #a0def0;
+    
 
       .left__list {
-        width: 50%;
+        width: 70%;
         float: right;
+        text-align: right;
         clear: both;
+        margin-bottom: 35px;
+
+        
+      .left__range input {
+        width: 100%;
+        background: $primary-color!important;
+      }
 
         .left__time {
           float: left;
@@ -160,59 +175,202 @@ body {
 
         .left__icon {
           display: table-cell;
+          vertical-align: top;
+          padding-top: 10px;
         }
         
         .left__content {
           display: table-cell;
+          vertical-align: top;
           text-align: left;
           padding-left: 15px;
-          
+          padding-top: 0;
+
+          .left__header {
+            font-size: 1.313rem;
+          }
+
           .left__btn {
-            border: 2px solid #ccc;
-            padding: 5px 15px;
+            font-size: 1.125rem;
+            border: 2px solid $btn-border;
+            padding: 10px 25px;
             background: $primary-color;
             color: $bg-color;
             margin: 10px 0;
+          }
+
+          .left__time {
+            margin-right: 12px;
+
+            label.left__btn {
+              display: block;
+              font-size: 0.875rem;
+              padding: 10px 15px;
+              
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            
+            .left__radio {
+              text-align: center;
+              
+              &::before {
+                content: "";
+                display: block;
+                border-radius: 50%;
+                border: 1px solid $btn-border;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                color: #fff;
+              }
+            }
+
+            .left__radio input[type="radio"] {
+              display: none;
+            }
           }
         }
       }
     }
     .left__bottom {
-      background: $bg-color;
-      color: #000;
+      color:  #666666;
+      font-size: 0.938rem;
+      font-weight: 300;
+      text-align: right;
     }
   }
 
   &__right {
     width: 40%;
-    min-height: 500px;
-    background: #f4f4f4;
+    min-height: 650px;
     float: left;
     padding-left: 25px;
 
+    .right__header {
+      font-family: $second-font;
+      color:  #00a7d6;
+      font-size: 1.313rem;
+      font-weight: bold;
+      text-align: left;
+      padding-top: 10px;
+      margin-bottom: 30px;
+    }
+
     .right__plans-btn {
+      margin-bottom: 20px;
+
       .plans-btn__list {
         .plans-btn__item {
-          float: left;
-          margin-right: 2%;
-          padding: 10px;
-          border: 2px solid $primary-color;
+          display: inline-block;
+          margin-right: 1%;
+          padding: 15px 20px;
+          border: 3px solid $primary-color;
+          color:  #00a7d6;
+          font-size: 0.875rem;
+          font-weight: bold;
+          text-align: center;
           
+          &.basic {
+
+          }
+
+          &.standart {
+            
+          }
+
+          &.premium,
+          &.vip {
+            border-radius: 25px;
+            border: 3px solid #b2e4f3;
+          }
+
+          &.vip {
+            padding: 15px 40px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
 
+    .right__coast {
+      margin-bottom: 42px;
+      color:  #5b5e67;
+      font-size: 1.313rem;
+      font-weight: bold;
+      text-align: left;
+
+      .coats__span {
+        color: $primary-color;
+      }
+    }
+
     .right_table {
-      width:100%;
+      width: 450px;
       border-collapse:collapse;
-      border: 1px solid $primary-color;
+      border: 1px solid #efefef;
+      padding-left: 27px;
+      font-size: 0.938rem;
+      margin-bottom: 50px;
 
       tr {
-        border: 1px solid $primary-color;
+        border: 2px solid #efefef;
 
         td {
-          padding: 10px 0;
+          padding: 11px 27px;
         }
+
+        td:nth-child(even) {
+          text-align: center;
+          color: $primary-color;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .right__bottom {
+      text-align: left;
+      
+
+      .bottom__header {
+        color:  #5b5e67;
+        font-size: 1.625rem;
+        margin-bottom: 5px;
+        font-weight: 300;
+      }
+
+      .bottom__subheader {
+        color:  #b3b3b3;
+        font-size: 1rem;
+      }
+
+      .bottom__total {
+        color: $primary-color;
+        font-size: 2.438rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+      }
+
+      .bottom__btn {
+        color: $primary-color;
+        font-size: 1.313rem;
+        font-weight: 700;
+        padding: 18px 84px 18px 74px;
+        border: 3px solid $primary-color;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .4s ease-in;
+
+        &:hover {
+          background: $primary-color;
+          color: #fff;
+        }
+
       }
     }
   }
