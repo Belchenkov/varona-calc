@@ -132,13 +132,23 @@ body {
     font-weight: bold;
     margin-bottom: 18px;
     padding-bottom: 0; }
-    .header__h1:after {
-      content: "";
-      display: block;
-      margin-top: 10px;
-      width: 55px;
-      background-color: white;
-      height: 3px; }
+  .header__under-line {
+    position: relative;
+    margin-bottom: 10px; }
+  .header__under-bold {
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #fff; }
+  .header__under-thin {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    display: block;
+    width: 190px;
+    background-color: #10add9;
+    height: 1px;
+    margin-top: 1px; }
   .header__subheader {
     font-size: 1.3125rem; }
   .header__bottom {

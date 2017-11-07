@@ -56,16 +56,29 @@ body {
     font-weight: bold;
     margin-bottom: 18px;
     padding-bottom: 0;
+  }
 
-    &:after {
-      content: "";
-      display: block;
-      margin-top: 10px;
-      width: 55px;
-      background-color: $bg-color;
-      height: 3px;
+  &__under-line {
+    position: relative;
+    margin-bottom: 10px;
+  }
   
-    }
+  &__under-bold {
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #fff;
+  }
+
+  &__under-thin {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    display: block;
+    width: 190px;
+    background-color: #10add9;
+    height: 1px;
+    margin-top: 1px;
   }
 
   &__subheader {
