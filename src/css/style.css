@@ -91,6 +91,50 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #FFFFFF; }
 
+.radio {
+  vertical-align: top;
+  width: 2px;
+  height: 2px;
+  margin: 0 3px 0 0; }
+
+.radio + label {
+  cursor: pointer; }
+
+.radio:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.radio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 35px; }
+
+.radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #4dc2e2;
+  border-radius: 50%;
+  background: #FFF; }
+
+.radio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: 45px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00a7d6;
+  opacity: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s; }
+
+.radio:checked + label:after {
+  opacity: 1; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -248,7 +292,7 @@ body {
             width: 100%;
             background: #00a7d6 !important; }
           .main__left .left__box .left__list .left__content .left__time {
-            margin-right: 12px; }
+            margin-right: 8px; }
             .main__left .left__box .left__list .left__content .left__time label.left__btn {
               display: block;
               font-size: 0.875rem;
@@ -256,18 +300,8 @@ body {
               .main__left .left__box .left__list .left__content .left__time label.left__btn:hover {
                 cursor: pointer; }
             .main__left .left__box .left__list .left__content .left__time .left__radio {
-              text-align: center; }
-              .main__left .left__box .left__list .left__content .left__time .left__radio::before {
-                content: "";
-                display: block;
-                border-radius: 50%;
-                border: 1px solid #4dc2e2;
-                width: 10px;
-                height: 10px;
-                background-color: #fff;
-                color: #fff; }
-            .main__left .left__box .left__list .left__content .left__time .left__radio input[type="radio"] {
-              display: none; }
+              text-align: center;
+              position: relative; }
     .main__left .left__bottom {
       color: #666666;
       font-size: 0.938rem;

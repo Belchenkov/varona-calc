@@ -6,6 +6,8 @@
 // Input Range
 @import 'partials/_rangeInput.scss';
 
+// Input Radio
+@import 'partials/radio.scss';
 
 * {
   box-sizing: border-box;
@@ -18,7 +20,6 @@ ul {
   margin: 0;
   list-style: none;
 }
-
 
 body {
   background-color: $bg-color;
@@ -213,7 +214,7 @@ body {
           }
 
           .left__time {
-            margin-right: 12px;
+            margin-right: 8px;
 
             label.left__btn {
               display: block;
@@ -224,24 +225,10 @@ body {
                 cursor: pointer;
               }
             }
-            
+
             .left__radio {
               text-align: center;
-              
-              &::before {
-                content: "";
-                display: block;
-                border-radius: 50%;
-                border: 1px solid $btn-border;
-                width: 10px;
-                height: 10px;
-                background-color: #fff;
-                color: #fff;
-              }
-            }
-
-            .left__radio input[type="radio"] {
-              display: none;
+              position: relative;
             }
           }
         }
@@ -358,7 +345,6 @@ body {
         }
       }
     }
-
     .right__bottom {
       text-align: left;
       

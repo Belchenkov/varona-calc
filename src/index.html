@@ -67,50 +67,37 @@
                             
                         </div>
 
+
                         <div class="left__list">
                             <div class="left__icon">
                                 <img src="img/hours.svg" alt="Режим работы специалиста">
                             </div>
                             <div class="left__content">
                                 <div class="left__header">Режим работы специалиста</div>
-                                <div class="left__time"> 
-                                    <label for="time_one" class="left__btn">
-                                        9:00-18:00
-                                    </label>
+
+                                <div class="left__time">
                                     <div class="left__radio">
-                                        <input 
-                                            id="time_one"
-                                            type="radio"
-                                            name="time"
-                                            v-on:click="console.log('click')"
-                                        > 
+                                        <input type="radio" class="radio" name="radio" id="radio" />
+                                        <label for="radio" class="left__btn">
+                                            9:00-18:00
+                                        </label>
                                     </div>
                                 </div>
 
-                                <div class="left__time"> 
-                                    <label for="time_two" class="left__btn">
-                                        9:00-20:00
-                                    </label>
+                                <div class="left__time">
                                     <div class="left__radio">
-                                        <input 
-                                            id="time_two"
-                                            type="radio"
-                                            name="time"
-                                            v-on:click="console.log('click')"
-                                        > 
+                                        <input type="radio" class="radio" name="radio" id="radio2" />
+                                        <label for="radio2" class="left__btn">
+                                            9:00-20:00
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="left__time"> 
-                                    <label for="time_three" class="left__btn">
-                                        Круглосуточно
-                                    </label>
+                                <div class="left__time">
                                     <div class="left__radio">
-                                        <input 
-                                            id="time_three"
-                                            type="radio"
-                                            name="time"
-                                            v-on:click="console.log('click')"
-                                        > 
+                                        <input type="radio" class="radio" name="radio" id="radio3" />
+                                        <label for="radio3" class="left__btn">
+                                            Круглосуточно
+                                        </label>
                                     </div>
                                 </div>
                             </div> 
