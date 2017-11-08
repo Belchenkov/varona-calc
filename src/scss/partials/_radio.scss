@@ -15,6 +15,12 @@
   position: relative;
   padding: 0 0 0 35px;
 }
+
+.radio:checked ~ label {
+  background: #fff!important;
+  color: #00a7d6!important;
+}
+
 .radio:not(checked) + label:before {
   content: '';
   position: absolute;
@@ -40,4 +46,15 @@
 }
 .radio:checked + label:after {
   opacity: 1;
+}
+
+#radio3.radio:not(checked) + label:before {
+  top: 50px;
+  left: 55px;
+}
+#radio3.radio:not(checked) + label:after {
+  top: 55px;
+  left: 60px;
+  width: 6px;
+  height: 6px;
 }
