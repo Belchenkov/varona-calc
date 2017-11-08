@@ -60,7 +60,7 @@
                                         max="10"
                                         step="1"
                                         value="{{amountComp}}"
-                                        v-on:input="rangeComp($event)"
+                                        @input="rangeComp($event)"
                                     > 
                                 </div> 
                             </div>
@@ -75,7 +75,7 @@
                             <div class="left__content">
                                 <div class="left__header">Режим работы специалиста</div>
 
-                                <div class="left__time">
+                                <div class="left__time" @click="basePlan = false">
                                     <div class="left__radio">
                                         <input type="radio" class="radio" name="radio" id="radio" />
                                         <label for="radio" class="left__btn">
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
 
-                                <div class="left__time">
+                                <div class="left__time" @click="basePlan = true">
                                     <div class="left__radio">
                                         <input type="radio" class="radio" name="radio" id="radio2" />
                                         <label for="radio2" class="left__btn">
@@ -92,7 +92,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="left__time">
+                                <div class="left__time" @click="basePlan = true">
                                     <div class="left__radio">
                                         <input type="radio" class="radio" name="radio" id="radio3" />
                                         <label for="radio3" class="left__btn">
@@ -118,7 +118,7 @@
                                         max="10"
                                         step="1"
                                         value="{{amountServer}}"
-                                        v-on:input="rangeServer($event)"
+                                        @input="rangeServer($event)"
                                     > 
                                 </div>
                             </div> 
@@ -134,10 +134,10 @@
                     <h3 class="right__header">Вам подходят тарифные планы</h3>
                     <div class="right__plans-btn">
                         <ul class="plans-btn__list">
-                            <li class="plans-btn__item basic">Базовый</li>
-                            <li class="plans-btn__item standart">Стандарт</li>
-                            <li class="plans-btn__item premium">Премиум</li>
-                            <li class="plans-btn__item vip">VIP</li>
+                            <li class="plans-btn__item basic" @click="plansBtn($event)" v-bind:class="{basicDisabled: basePlan}">Базовый</li>
+                            <li class="plans-btn__item standart" @click="plansBtn($event)">Стандарт</li>
+                            <li class="plans-btn__item premium" @click="plansBtn($event)">Премиум</li>
+                            <li class="plans-btn__item vip" @click="plansBtn($event)">VIP</li>
                         </ul>
                     </div>
                     <div class="right__coast">
